@@ -1,6 +1,6 @@
 <?php
 
-$scon = mysqli_connect('server', 'user', 'pass', 'base_datos');
+$scon = mysqli_connect('localhost', 'root', '', 'sistema_bdm');
 
 if (!$scon) {
     die("Conexión fallida: " . mysqli_connect_error());
