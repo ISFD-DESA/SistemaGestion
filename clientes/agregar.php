@@ -41,7 +41,7 @@ mysqli_close($scon);
 
             <div class="section-header">
 
-            <h1 class="text-center">Agregar Cliente</h1>
+            <h1 class="text-center">Agregar Cliente Test</h1>
                 <div class="container">
                     <form method="post" action="agregar.php">
                         <div class="mb-3">
@@ -70,7 +70,7 @@ mysqli_close($scon);
                         </div>
                         <div class="mb-3">
                             <label for="cantidad" class="form-label">Correo:</label>
-                            <input type="text" class="form-control" id="correo" name="correo" required>
+                            <input type="mail" class="form-control" id="correo" name="correo" required>
                         </div>
                         <div class="mb-3">
                             <label for="cantidad" class="form-label">Datos:</label>
