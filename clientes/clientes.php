@@ -11,7 +11,7 @@
         <section id="services" >
         <div class="container">
 
-        <h1 class="text-center">Listado de Clientes Test</h1>
+        <h1 class="text-center">Listado de Clientes Test 2</h1>
         <a class="btn btn-primary" href="agregar.php" role="button">Agregar Cliente</a>
         <div class="container">
             <table class="table table-light">
