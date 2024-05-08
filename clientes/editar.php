@@ -30,7 +30,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
 
             <div class="section-header">
 
-            <h1 class="text-center">Modificar Cliente</h1>
+            <h1 class="text-center">Modificar Cliente Test</h1>
             <div class="container">
                 <form method="post" action="actualizar_clientes.php">
                     <input type="hidden" name="id" value="<?php echo $fila['id_cliente']; ?>">
