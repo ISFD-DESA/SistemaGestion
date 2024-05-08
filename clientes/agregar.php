@@ -1,10 +1,32 @@
 <?php
 include '../config/conexion.php'; 
 
+// Verificamos si se ha enviado un formulario por POST
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Recuperamos los datos del formulario
    
+    $apellido = $_POST['apellido'];
+    $nombre = $_POST['nombre'];
+    $dni = $_POST['dni'];
+    $sexo = $_POST['sexo'];
+    $domicilio = $_POST['domicilio'];
+    $telefono = $_POST['telefono'];
+    $correo = $_POST['correo'];
+    $datos_importantes = $_POST['datos'];
+
     // Insertamos un nuevo producto en la base de datos
-   
+    $sql = "INSERT INTO clientes (apellido, nombre, dni, sexo, domicilio, telefono, correo, datos_importantes) 
+    VALUES ('$apellido', '$nombre', $dni, '$sexo', '$domicilio', '$telefono', '$correo', '$datos_importantes')";
+
+    if (mysqli_query($scon, $sql)) {
+        echo "<script>alert('Cliente agregado exitosamente'); window.location='clientes.php';</script>";
+        exit(); // Asegura que no se ejecute más código después de la redirección
+    } else {
+        echo "Error al agregar el cliente: " . mysqli_error($scon);
+    }
+}
+
+mysqli_close($scon);
 ?>
 
 <?php     include '../config/verif_session.php'; 
